@@ -60,7 +60,7 @@ pipeline {
             }
         }
         stage('Deploy to Production') {
-            steps { script { deploy('shopease-prod', 8082, env.IMAGE, false) } }
+            steps { script { deploy('shopease-prod', 8083, env.IMAGE, false) } }
         }
         stage('Verify Production') {
             steps { script { smoke('shopease-prod') } }
